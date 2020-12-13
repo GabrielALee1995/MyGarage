@@ -1,0 +1,36 @@
+﻿@{
+   Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width" />
+   <title> MyGarage </title>
+   <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+   <link href="~/CustomStyle.css" rel="stylesheet" />
+
+</head>
+<body class="bg-gradient-grey-black center-body">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-12 text-center">
+            <img src="~/Images/MyGarageLogo.png" class="card-img logo-home" />
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-12 text-center">
+            <h3 class="subtitle-text">Let's Start Tracking!</h3>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-6 text-right">
+         <a class="btn btn-green-home" asp-controller="User" asp-action="Register">Register</a>
+      </div>
+      <div class="col-6 text-left">
+         <a class="btn btn-green-home" asp-controller="User" asp-action="Login">Login</a>
+      </div>
+   </div>
+</body>
+</html>

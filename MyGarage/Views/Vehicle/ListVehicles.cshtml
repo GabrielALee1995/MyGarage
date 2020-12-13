@@ -1,0 +1,52 @@
+﻿@model IQueryable<Vehicle>
+@inject IUserRepository UserRepository
+
+<div class="row">
+   <div class="col-12 text-center">
+      <h2 class="page-title display-4">My Vehicles</h2>
+   </div>
+</div>
+
+<hr />
+
+@foreach (Vehicle v in Model)
+{
+   <div class="row">
+      <div class="col-3">
+         <div>@v.Photo</div>
+      </div>
+      <div class="col-6 text-center">
+         <table class="center vehicle-details">
+            <tr>
+               <td>
+                  <h2 class="green-text">@v.NickName</h2>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <h4>@v.Year @v.Make</h4>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <h4>@v.Model</h4>
+               </td>
+            </tr>
+         </table>
+      </div>
+      <div class="col-3 align-self-center">
+         <a class="btn btn-details" asp-controller="Vehicle" asp-action="Details" asp-route-vehicleId="@v.Id">
+            Details
+         </a>
+      </div>
+
+   </div>
+   <hr />
+}
+<div class="row">
+   <div class="col-12 text-center">
+      <a class="btn-add btn" asp-controller="Vehicle" asp-action="Add" asp-route-userId="@UserRepository.GetLoggedInUserId()">
+         Add Vehicle
+      </a>
+   </div>
+</div>

@@ -1,0 +1,43 @@
+﻿@model User
+
+<div class="row">
+   <div class="col-12 text-center">
+      <h2 class="page-title display-4">My Profile</h2>
+   </div>
+</div>
+<hr />
+<div class="row">
+   <div class="col-4 offset-4 text-center">
+      <h3>@Model.Email</h3>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-4 offset-4">
+      <hr />
+   </div>
+</div>
+<br />
+
+<br />
+<div class="row">
+   <div class="col-6 text-right">
+      <a asp-controller="User" asp-action="UpdateEmail" asp-route-userId="@Model.Id" class="btn btn-edit">
+         Update Email
+      </a>
+   </div>
+   <div class="col-6 text-left">
+      <a asp-controller="User" asp-action="UpdatePassword" asp-route-userId="@Model.Id" class="btn btn-edit">
+         Update Password
+      </a>
+   </div>
+</div>
+<footer>
+   <div class="row fixed-bottom">
+      <div class="col-12 text-right">
+         <a class="btn btn-delete" asp-action="delete" asp-controller="User" asp-route-userId="@Model.Id">Delete Profile</a>
+      </div>
+   </div>
+</footer>
+
+

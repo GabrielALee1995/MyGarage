@@ -1,0 +1,47 @@
+﻿@inject IUserRepository UserRepository
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width" />
+   <title> MyGarage </title>
+   <link href="~/CustomStyle.css" rel="stylesheet" text="text/css" />
+   <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body class="bg-grey">
+   <header>
+      <div class="container-fluid">
+         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-gradient-grey-black box-shadow mb-3 fixed-top">
+            <div class="navbar-brand">
+               <img class="img-responsive logo-nav" src="~/Images/MyGarageLogo.png">
+            </div>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse ml-3">
+               <ul class="navbar-nav flex-grow-1">
+                  <li class="nav-item">
+                     <a class="nav-link btn-green-nav btn" asp-area="" asp-controller="Vehicle" asp-action="ListVehicles" asp-route-userId="@UserRepository.GetLoggedInUserId()">My Vehicles</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link btn-green-nav btn" asp-area="" asp-controller="User" asp-action="Details" asp-route-userId="@UserRepository.GetLoggedInUserId()">Profile</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="nav-item ml-1">
+               <a class="nav-link btn btn-logout" asp-area="" asp-controller="Home" asp-action="Index">Logout</a>
+            </div>
+         </nav>
+      </div>
+   </header>
+   <div class="container-fluid main-text" style="padding-top: 140px;">
+      <main>
+         @RenderBody()
+      </main>
+   </div>
+</body>
+
+</html>

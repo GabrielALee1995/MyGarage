@@ -1,0 +1,78 @@
+﻿@model Vehicle
+
+<div class="row">
+   <div class="col-8 offset-2 text-center">
+      <h2 class="page-title display-4">@Model.NickName</h2>
+   </div>
+   <div class="col-2 text-center">
+      <a asp-controller="Vehicle" asp-action="Edit" asp-route-vehicleId="@Model.Id" class="btn btn-edit-2">
+         Edit
+      </a>
+   </div>
+</div>
+<hr />
+
+<div class="row">
+   <div class="col-6 offset-3 text-center">
+      <h3>@Model.Photo</h3>
+   </div>
+   <div class="col-2 offset-1 text-center">
+      <a asp-controller="Repair" asp-action="ListRepairs" asp-route-vehicleId="@Model.Id" class="btn btn-services">
+         Repairs
+      </a>
+   </div>
+</div>
+<br />
+<br />
+
+<div class="row">
+   <div class="col-6 offset-3 text-center">
+      <h3 class="green-text">@Model.Year @Model.Make @Model.Model</h3>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 offset-3 text-center">
+      <hr />
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right">
+      <h4 class="green-text">Mileage:</h4>
+   </div>
+   <div class="col-6 text-left">
+      <h4>@Model.Mileage.ToString("N0")</h4>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right">
+      <h4 class="green-text"> License Plate:</h4>
+   </div>
+   <div class="col-6 text-left">
+      <h4>@Model.LicensePlate</h4>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-12 text-center green-text">
+      <h4>Vehicle Identification Number:</h4>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-12 text-center">
+      <h4>@Model.VehicleVIN</h4>
+   </div>
+</div>
+<br />
+<br />
+
+<div class="row align-bottom">
+   <div class="col-2 offset-10 text-center">
+      <a asp-controller="Vehicle" asp-action="Delete" asp-route-vehicleId="@Model.Id" class="btn btn-delete">
+         Delete
+      </a>
+   </div>
+</div>

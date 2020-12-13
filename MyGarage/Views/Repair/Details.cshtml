@@ -1,0 +1,97 @@
+﻿@model Repair
+
+<div class="row">
+   <div class="col-2 text-center">
+      <a asp-controller="Repair" asp-action="ListRepairs" asp-route-vehicleId="@Model.VehicleId" class="btn btn-logout">
+         Back
+      </a>
+   </div>
+   <div class="col-8  text-center">
+      <h2 class="page-title display-4">@ViewBag.VehicleNickName @Model.Type Repair</h2>
+   </div>
+   <div class="col-2 text-center">
+      <a  class="btn btn-edit-2" asp-controller="Repair" asp-action="Edit" asp-route-repairId="@Model.Id">
+         Edit
+      </a>
+   </div>
+</div>
+<hr />
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Repair:
+   </div>
+   <div class="col-6 text-left">
+      @Model.Type
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Date Perfomed:
+   </div>
+   <div class="col-6 text-left">
+      @Model.Date.ToString("MMMM dd, yyyy")
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Location:
+   </div>
+   <div class="col-6 text-left">
+      @Model.Location
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Cost:
+   </div>
+   <div class="col-6 text-left">
+      @if (Model.Cost != null)
+      {
+      @Model.Cost.Value.ToString("C")
+      }
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Vehicle Mileage:
+   </div>
+   <div class="col-6 text-left">
+      @Model.VehicleMileage.ToString("N0")
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Warranty Expiration:
+   </div>
+   <div class="col-6 text-left">
+      @if (Model.WarrantyExpiration != null)
+      {
+         @Model.WarrantyExpiration.Value.ToString("MMMM dd, yyyy")
+      }
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-center">
+      @Model.Photo
+   </div>
+   <div class="col-6 text-center">
+      @Model.Reciept
+   </div>
+</div>
+<br />
+<br />
+
+<div class="row align-bottom">
+   <div class="col-2 offset-10 text-center">
+      <a class="btn btn-delete" asp-controller="Repair" asp-action="Delete" asp-route-repairId="@Model.Id">
+         Delete
+      </a>
+   </div>
+</div>

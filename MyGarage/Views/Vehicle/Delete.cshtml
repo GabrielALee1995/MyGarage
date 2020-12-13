@@ -1,0 +1,45 @@
+﻿@model Vehicle
+
+<div class="row">
+   <div class="col-12 text-center">
+      <h2 class="page-title">Delete @Model.NickName?</h2>
+   </div>
+</div>
+<div class="row">
+   <div class="col-12 text-center">
+      <h2>@Model.Year @Model.Make @Model.Model</h2>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-12 text-center">
+      <p>
+         Deleting will permanently delete all information related to @Model.NickName!
+      </p>
+   </div>
+</div>
+
+<form method="post">
+   <input type="hidden" asp-for="Id" />
+   <input type="hidden" asp-for="Year" />
+   <input type="hidden" asp-for="Make" />
+   <input type="hidden" asp-for="Model" />
+   <input type="hidden" asp-for="NickName" />
+   <input type="hidden" asp-for="Mileage" />
+   <input type="hidden" asp-for="LicensePlate" />
+   <input type="hidden" asp-for="VehicleVIN" />
+   <input type="hidden" asp-for="Photo" />
+   <input type="hidden" asp-for="User" />
+   <input type="hidden" asp-for="UserId" />
+
+   <div class="row">
+      <div class=" col-6 text-right">
+         <a class="btn btn-cancel-2" asp-controller="Vehicle" asp-action="Details" asp-route-vehicleId="@Model.Id">
+            Cancel
+         </a>
+      </div>
+      <div class="col-6 text-left">
+         <input type="submit" class="btn btn-confirm" value=" Delete @Model.NickName" />
+      </div>
+   </div>
+</form>

@@ -1,0 +1,60 @@
+﻿@{
+   Layout = null;
+}
+
+@model User
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width" />
+   <title> MyGarage </title>
+   <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+   <link href="~/CustomStyle.css" rel="stylesheet" />
+</head>
+<body class="center-body bg-gradient-grey-black">
+   <form method="post">
+
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-12 text-center">
+               <img src="~/Images/MyGarageLogo.png" class="card-img logo-home" />
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-12 text-center">
+               <h2 class="page-title">Login</h2>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-6 offset-3 text-center">
+               <label class="sr-only form-group" for="email">Email:</label>
+               <input class="form-control input" asp-for="Email" placeholder="Email" title="Email" id="email" />
+            </div>
+         </div>
+         <br />
+         <div class="row">
+            <div class="col-6 offset-3 text-center">
+               <label class="sr-only" for="pass">Password:</label>
+               <input class="form-control input" asp-for="Password" placeholder="Password" title="Password" id="pass" />
+            </div>
+         </div>
+         <br />
+
+         <div class="row">
+            <div class="col-6 text-right">
+               <a class="btn btn-cancel btn-outline-dark" asp-controller="Home" asp-action="Index">
+                  Cancel
+               </a>
+            </div>
+            <div class="col-6 text-left">
+               <input class="btn btn-green-confirm btn-outline-dark" type="submit" value="Login" />
+            </div>
+         </div>
+      </div>
+   </form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@model Vehicle
+@inject IUserRepository UserRepository
+
+<div class="row">
+   <div class="col-12 text-center">
+      <h2 class="page-title display-4">Add Vehicle to My Garage</h2>
+   </div>
+</div>
+<hr />
+
+<form method="post">
+   <div asp-validation-summary="All"></div>
+   <input type="hidden" asp-for="Id" />
+
+   <div class="row">
+      <div class="col-4 text-center offset-4">
+         <label asp-for="NickName">Nickname:</label>
+         <input class="form-control input" asp-for="NickName" placeholder="Nickname" />
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-2 offset-2 text-center">
+         <label asp-for="Year">Year:</label>
+         <input class="form-control input" asp-for="Year" placeholder="Year" />
+      </div>
+      <div class="col-3 text-center">
+         <label asp-for="Make">Make:</label>
+         <input class="form-control input" asp-for="Make" placeholder="Make" />
+      </div>
+      <div class="col-3 text-center">
+         <label asp-for="Model">Model:</label>
+         <input class="form-control input" asp-for="Model" placeholder="Model" />
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-3  text-center offset-3">
+         <label asp-for="LicensePlate">License Plate:</label>
+         <input class="form-control input" asp-for="LicensePlate" placeholder="License Plate" />
+      </div>
+      <div class="col-3  text-center">
+         <label asp-for="Mileage">Mileage:</label>
+         <input class="form-control input" asp-for="Mileage" placeholder="Mileage" />
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-6 offset-3 text-center">
+         <label asp-for="VehicleVIN">VIN:</label>
+         <input class="form-control input" asp-for="VehicleVIN" placeholder="Vehicle Identification Number" />
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-4 text-center offset-4">
+         <label asp-for="Photo">Photo:</label>
+         <input asp-for="Photo" class="form-control input">
+      </div>
+   </div>
+   <br />
+
+   <div class="row">
+      <div class="col-6 text-right">
+         <a asp-controller="Vehicle" asp-action="ListVehicles" 
+            asp-route-userId="@UserRepository.GetLoggedInUserId()" class="btn btn-cancel-2">
+            Cancel
+         </a>
+      </div>
+      <div class="col-6 text-left">
+         <input class="btn btn-confirm" type="submit" value="Add Vehicle" />
+      </div>
+   </div>
+</form>
