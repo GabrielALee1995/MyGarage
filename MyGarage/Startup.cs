@@ -34,10 +34,14 @@ namespace MyGarage
          //     (_configuration
          //         .GetConnectionString("DefaultConnection")));
 
+         //services.AddDbContext<AppDbContext>(options =>
+         //options.UseSqlServer
+         //(_configuration
+         //.GetConnectionString("AzureConnection")));
+
          services.AddDbContext<AppDbContext>(options =>
-           options.UseSqlServer
-              (_configuration
-                  .GetConnectionString("AzureConnection")));
+         options.UseSqlServer
+         (System.Environment.GetEnvironmentVariable("mygarageConnectionString")));
 
          services.AddScoped<IUserRepository, EfUserRepository>();
          services.AddScoped<IVehicleRepository, EfVehicleRepository>();

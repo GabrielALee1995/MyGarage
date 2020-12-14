@@ -1,0 +1,378 @@
+﻿
+.center-body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-height: 100vh;
+}
+
+.bg-gradient-grey-black {
+   background-image: linear-gradient( #656565, black);
+   color: #fff !important;
+}
+
+.btn-green-home {
+   background-color: #507226;
+   color: black !important;
+   padding: 10px 32px;
+   text-align: center;
+   font-size: 13px;
+   margin: 2px 2px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: hidden;
+}
+
+   .btn-green-home:hover {
+      opacity: 1;
+   }
+
+.btn-green-confirm {
+   background-color: #507226 !important;
+   color: black !important;
+   padding: 10px 32px;
+   text-align: center;
+   font-size: 13px;
+   margin: 2px 2px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: hidden;
+}
+
+   .btn-green-confirm:hover {
+      opacity: 1;
+      background-color: #78b72a;
+   }
+
+
+.btn-confirm {
+   background-color: #507226 !important;
+   color: black !important;
+   text-align: center;
+   font-size: 13px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: hidden;
+   height: auto;
+}
+
+   .btn-confirm:hover {
+      opacity: 1;
+      background-color: #78b72a;
+   }
+
+.btn-cancel {
+   background-color: #c33030;
+   color: black !important;
+   padding: 10px 32px;
+   text-align: center;
+   font-size: 13px;
+   margin: 2px 2px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: hidden;
+}
+
+   .btn-cancel:hover {
+      opacity: 1;
+      background-color: #c21818;
+   }
+
+.btn-cancel-2 {
+   background-color: #c33030 !important;
+   color: black !important;
+   text-align: center;
+   font-size: 13px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: hidden;
+   height: auto;
+   width: 120px;
+}
+
+   .btn-cancel-2:hover {
+      opacity: 1;
+      background-color: #c21818;
+   }
+
+.btn-delete {
+   background-color: #c33030 !important;
+   color: black !important;
+   text-align: center;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block !important;
+   cursor: pointer;
+   border: hidden;
+   height: auto;
+}
+
+   .btn-delete:hover {
+      opacity: 1;
+      background-color: #c21818;
+   }
+
+.btn-cancel-2 {
+   background-color: #c33030 !important;
+   color: black !important;
+   text-align: center;
+   font-size: 13px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: hidden;
+   height: auto;
+}
+
+   .btn-cancel-2:hover {
+      opacity: 1;
+      background-color: #c21818;
+   }
+
+.btn-logout {
+   color: #941818 !important;
+   padding: 7px 32px;
+   text-align: center;
+   font-size: 15px;
+   margin: 2px 2px;
+   backface-visibility: hidden;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: medium;
+   font-family: Arial;
+   font-style: italic;
+}
+
+   .btn-logout:hover {
+      opacity: .5;
+      background-color: black;
+      text-decoration: underline;
+      border: solid;
+   }
+
+.btn-green-nav {
+   color: #507226 !important;
+   padding: 7px 32px;
+   text-align: center;
+   font-size: 15px;
+   margin: 2px 2px;
+   backface-visibility: hidden;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: medium;
+   font-family: Arial;
+   font-style: italic;
+}
+
+   .btn-green-nav:hover {
+      opacity: .9;
+      background-color: none;
+      border: solid;
+   }
+
+.btn-add {
+   color: black !important;
+   text-align: center;
+   font-size: 15px;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: solid !important;
+   font-family: Arial;
+   background-color: #507226 !important;
+   width: 300px;
+}
+
+   .btn-add:hover {
+      opacity: .8;
+      color: black !important;
+      background-color: #507226;
+      text-decoration: underline;
+   }
+
+.btn-edit {
+   color: black !important;
+   text-align: center;
+   font-size: 15px;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: solid !important;
+   font-family: Arial;
+   background-color: #507226 !important;
+   width: 175px;
+}
+
+   .btn-edit:hover {
+      opacity: .8;
+      color: black !important;
+      background-color: #507226;
+      text-decoration: underline;
+   }
+
+.btn-edit-2 {
+   color: black !important;
+   text-align: center;
+   font-size: 15px;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: solid !important;
+   font-family: Arial;
+   background-color: #507226 !important;
+   width: 100px;
+}
+
+   .btn-edit-2:hover {
+      opacity: .8;
+      color: black !important;
+      background-color: #507226;
+      text-decoration: underline;
+   }
+
+.btn-services {
+   color: #507226 !important;
+   text-align: center;
+   font-size: 15px;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: solid !important;
+   font-family: Arial;
+   background-color: transparent !important;
+   width: 100px;
+}
+
+   .btn-services:hover {
+      opacity: .8;
+      background-color: #507226 !important;
+      text-decoration: underline;
+      color: black !important;
+   }
+
+.btn-details {
+   color: #507226 !important;
+   font-size: 15px;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   border: solid !important;
+   font-family: Arial;
+   background-color: transparent;
+}
+
+   .btn-details:hover {
+      opacity: .8;
+      color: black !important;
+      background-color: #507226;
+      text-decoration: underline;
+   }
+
+
+
+.title-text {
+   color: black;
+   text-shadow: 2px 2px 5px #61892f;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.nav-toggler-text {
+   color: #222000;
+   text-shadow: 2px 2px 5px #61892f;
+   text-transform: uppercase;
+   text-align: center;
+   text-decoration: underline;
+}
+
+.subtitle-text {
+   color: #507226;
+}
+
+.page-title {
+   color: #507226;
+   font-family: 'Trebuchet MS';
+}
+
+.bg-grey-green {
+   background-image: linear-gradient( ##6b6e70, #61892f);
+   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.62);
+}
+
+.bg-grey {
+   background-color: black;
+   color: #bebebe;
+}
+
+hr {
+   height: 1px;
+   background-color: #507226;
+   border: none;
+}
+
+.center {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.main-text {
+   color: #7f8283
+}
+
+.vehicle-details {
+   font-family: 'Lucida Sans';
+}
+
+.input {
+   background-color: #b2b2b2 !important;
+   border: hidden !important;
+   color: black !important;
+}
+
+.logo-home {
+   height: 250px;
+   width: 250px;
+}
+
+.logo-nav {
+   height: 110px;
+   width: 110px;
+}
+
+.list-header {
+   color: #507226;
+   text-transform: uppercase;
+   font-size: 18px;
+}
+
+.green-text {
+   color: #507226;
+}
+
+.details {
+   color: #507226 !important;
+   transition: 0.3s;
+   display: inline-block;
+   cursor: pointer;
+   font-family: Arial;
+   background-color: transparent;
+}
+
+   .details:hover {
+      opacity: .8;
+      text-decoration: underline;
+   }
+
