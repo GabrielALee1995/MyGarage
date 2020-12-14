@@ -27,6 +27,7 @@ After the user has created their profile, they then can individually add their v
 *	Vehicle Identification Number (Optional)
 *	Nickname (Optional)
 *	Photo (Optional)
+* Purchase Price (Optional)
 
 Once they do so, they will be able to track their Oil changes, Tire information and service intervals, vehicle upgrades, as well as repairs. For the oil changes, the users will be able to track the oil and filter used, the capacity used, if they added stabilizer, cost, as well as at what vehicle mileage this was performed. If the user wishes to track their tires, they can track the brand, tire size, type of tire, where they purchased the tires, the mileage installed, and they may track tire rotations as well. 
 As for the main application concept, upgrades and Repairs will have the same options to add to their specific vehicle.  However, repairs and upgrades will be their own two separated categories with sub categories to choose from based off of the location on the party type. These options include:
