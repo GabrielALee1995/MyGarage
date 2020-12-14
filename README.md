@@ -5,7 +5,7 @@
 ### December, 2020
 #
 
-* [Database Diagram](https://github.com/GabrielALee1995/PartsTracker/blob/main/Parts%20Tracker%20Database%20Diagram.pdf)
+* [Database Diagram](https://github.com/GabrielALee1995/MyGarage/blob/main/MyGarage%20Database%20Diagram.pdf)
 
 One big aspect for car enthusiasts who are building their own personal cars is keeping track of every part installed and when it was installed. Usually the system for tracking vehicle expenditures is using a good old-fashioned notebook or similar resource. A few expenditures that car enthusiasts keep track of are repairs and the costs associated, upgrades, the date installed, the price of the items installed, where the item was purchased, and other similar aspects. Tracking all these items is useful, to know the total amount invested in a certain vehicle as well as when it is time to replace or maintenance a specific item based off personal or manufacturer recommendations. The only app like this concept I have been using is the phone application, Car Care by CARFAX. This is a great application for tire rotations, emissions inspections, repairs, as well as vehicle registration. However, car enthusiasts tend to add modifications that are not common for their vehicle and like to keep track of receipts, where the item was purchased, warranties on those items, and other part information. Overall, this application will combine the best aspects of common vehicle maintenance as well as car enthusiast related upgrades that the user wishes to add. 
 
