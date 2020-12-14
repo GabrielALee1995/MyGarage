@@ -16,11 +16,6 @@
    <div class="col-6 offset-3 text-center">
       <h3>@Model.Photo</h3>
    </div>
-   <div class="col-2 offset-1 text-center">
-      <a asp-controller="Repair" asp-action="ListRepairs" asp-route-vehicleId="@Model.Id" class="btn btn-services">
-         Repairs
-      </a>
-   </div>
 </div>
 <br />
 <br />
@@ -56,17 +51,58 @@
 </div>
 
 <div class="row">
-   <div class="col-12 text-center green-text">
-      <h4>Vehicle Identification Number:</h4>
+   <div class="col-6 text-right green-text">
+      <h4>Price Purchased:</h4>
+   </div>
+   <div class="col-6 text-left">
+      @if (Model.PurchasePrice != null)
+      {
+         <h4>@Model.PurchasePrice.Value.ToString("C")</h4>
+      }
+   </div>
+</div>
+<br />
+
+<div class="row">
+   <div class="col-6 text-right green-text">
+      <h4>Total Spent on @Model.NickName:</h4>
+   </div>
+   <div class="col-6 text-left">
+      <h4>@ViewBag.TotalCost</h4>
    </div>
 </div>
 
 <div class="row">
-   <div class="col-12 text-center">
-      <h4>@Model.VehicleVIN</h4>
+   <div class="col-8 offset-2 text-center">
+      <hr />
    </div>
 </div>
+
+<div class="row">
+   <div class="col-6 green-text text-right my-auto">
+      Total Repairs Cost:
+   </div>
+   <div class="col-2 my-auto text-left">
+      @ViewBag.RepairsCost
+   </div>
+   <div class="col-sm-3 text-left my-auto">
+      <a asp-controller="Repair" asp-action="ListRepairs" asp-route-vehicleId="@Model.Id" class="details">
+         View Repairs
+      </a>
+   </div>
+</div>
+
 <br />
+<br />
+
+<div class="row">
+   <div class="col-6 text-right green-text">
+      <p>Vehicle Identification Number:</p>
+   </div>
+   <div class="col-6 text-left">
+      <p>@Model.VehicleVIN</p>
+   </div>
+</div>
 <br />
 
 <div class="row align-bottom">

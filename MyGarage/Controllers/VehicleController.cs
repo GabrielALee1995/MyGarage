@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyGarage.Models;
+using System;
 using System.Linq;
 
 namespace MyGarage.Controllers
@@ -9,12 +10,14 @@ namespace MyGarage.Controllers
       //   F i e l d s   &   P r o p e r t i e s
       private IVehicleRepository _repository;
       private IUserRepository _userRepository;
+      private IRepairRepository _repairRepository;
 
       //   C o n s t r u c t o r s
-      public VehicleController(IVehicleRepository repository, IUserRepository userRepository)
+      public VehicleController(IVehicleRepository repository, IUserRepository userRepository, IRepairRepository repairRepository)
       {
          _repository = repository;
          _userRepository = userRepository;
+         _repairRepository = repairRepository;
       }
 
       //   M e t h o d s
@@ -33,6 +36,10 @@ namespace MyGarage.Controllers
       [HttpPost]
       public IActionResult Add(Vehicle v)
       {
+         DateTime nextYear = DateTime.Now;
+         int yearMax = nextYear.Year + 1;
+         ViewBag.NextYear = yearMax;
+
          if (ModelState.IsValid)
          {
             _repository.CreateVehicle(v);
@@ -52,7 +59,27 @@ namespace MyGarage.Controllers
 
       public IActionResult Details(int vehicleId)
       {
+         float repairsCost = 0;
+         float vehicleCost = 0;
+         float totalCost = 0;
+
+         IQueryable<Repair> repairs = _repairRepository.GetVehicleRepairs(vehicleId);
+         foreach(Repair r in repairs)
+         {
+            repairsCost += r.Cost.Value;
+         }
+         ViewBag.RepairsCost = repairsCost.ToString("C");
+
+
          Vehicle v = _repository.GetVehicleById(vehicleId);
+
+         if (v.PurchasePrice != null)
+         {
+            vehicleCost = v.PurchasePrice.Value;
+         }
+         totalCost = vehicleCost + repairsCost;
+         ViewBag.TotalCost = totalCost.ToString("C");
+
          return View(v);
       }//End VehicleDetails
 
@@ -60,6 +87,10 @@ namespace MyGarage.Controllers
       [HttpGet]
       public IActionResult Edit(int vehicleId)
       {
+         DateTime nextYear = DateTime.Now;
+         int yearMax = nextYear.Year + 1;
+         ViewBag.NextYear = yearMax;
+
          Vehicle v = _repository.GetVehicleById(vehicleId);
          return View(v);
       }//End Edit() [Get]

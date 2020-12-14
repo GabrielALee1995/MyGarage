@@ -2,7 +2,7 @@
 
 namespace MyGarage.Migrations
 {
-    public partial class repairwarrantynullable2 : Migration
+    public partial class VehiclePocoUpdate2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

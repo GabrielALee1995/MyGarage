@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6dY76+5uKNhsGYJDrEFTYS6Lyo27OU1x4i6lXrsolLBWi4ySMmoa3MTrc/BBeiA/OcjY0Zi50U9lrOfyWqZ1+A==",
+  "dgSpecHash": "G/KI4gaCFwMo5s7YtkmFfAVkWLrgIf9or9AgHsDc2s9vpWlwruvqd6ggLnouP3TwNx+h1yz2BBAWvmKO3EMdRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\MyGarage\\MyGarage\\MyGarage.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Projects\\MyGarage\\MyGarage\\MyGarage\\MyGarage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -77,6 +77,7 @@ namespace MyGarage.Models
             vehicleToUpdate.Mileage = vehicle.Mileage;
             vehicleToUpdate.VehicleVIN = vehicle.VehicleVIN;
             vehicleToUpdate.Photo = vehicle.Photo;
+            vehicleToUpdate.PurchasePrice = vehicle.PurchasePrice;
             _context.SaveChanges();
          }
          return vehicleToUpdate;

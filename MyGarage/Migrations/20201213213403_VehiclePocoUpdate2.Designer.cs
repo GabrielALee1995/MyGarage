@@ -10,8 +10,8 @@ using MyGarage.Models;
 namespace MyGarage.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201213033021_Repair-AspValidation")]
-    partial class RepairAspValidation
+    [Migration("20201213213403_VehiclePocoUpdate2")]
+    partial class VehiclePocoUpdate2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace MyGarage.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<decimal>("Cost")
+                    b.Property<decimal?>("Cost")
                         .HasColumnType("decimal(8,2)");
 
                     b.Property<DateTime>("Date")
@@ -114,10 +114,15 @@ namespace MyGarage.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NickName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("PurchasePrice")
+                        .HasColumnType("decimal(8,2)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");

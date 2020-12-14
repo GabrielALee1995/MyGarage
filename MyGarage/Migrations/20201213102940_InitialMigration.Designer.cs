@@ -10,8 +10,8 @@ using MyGarage.Models;
 namespace MyGarage.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201213044421_repair-edit")]
-    partial class repairedit
+    [Migration("20201213102940_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace MyGarage.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<decimal>("Cost")
+                    b.Property<decimal?>("Cost")
                         .HasColumnType("decimal(8,2)");
 
                     b.Property<DateTime>("Date")
@@ -54,7 +54,7 @@ namespace MyGarage.Migrations
                     b.Property<int>("VehicleMileage")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("WarrantyExpiration")
+                    b.Property<DateTime?>("WarrantyExpiration")
                         .HasColumnType("date");
 
                     b.HasKey("Id");

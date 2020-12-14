@@ -5802,11 +5802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Desktop\\MyGarage\\MyGarage\\MyGarage.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Desktop\\Projects\\MyGarage\\MyGarage\\MyGarage\\MyGarage.csproj",
       "projectName": "MyGarage",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\MyGarage\\MyGarage\\MyGarage.csproj",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Projects\\MyGarage\\MyGarage\\MyGarage\\MyGarage.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\MyGarage\\MyGarage\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Projects\\MyGarage\\MyGarage\\MyGarage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",

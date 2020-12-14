@@ -1,10 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MyGarage.Models
 {
@@ -13,7 +9,9 @@ namespace MyGarage.Models
    {
       public int    Id           { get; set; }
 
+      [Range(1760, 2030, ErrorMessage = "Year out of range")]
       [Required(ErrorMessage = "Year is Required")]
+      [UIHint("number")]
       public int    Year         { get; set; }
 
       [Required(ErrorMessage = "Make is Required")]
@@ -22,11 +20,21 @@ namespace MyGarage.Models
       [Required(ErrorMessage = "Model is Required")]
       public string Model        { get; set; }
 
+      [MaxLength(20)]
+      [Required(ErrorMessage = "Nickname is required")]
       public string NickName     { get; set; }
 
+      [Range(0, 1500000, ErrorMessage = "Mileage Out of Range")]
       [Required(ErrorMessage = "Mileage is Required")]
+      [UIHint("number")]
       public int    Mileage      { get; set; }
 
+      [Column(TypeName = "decimal(8,2)")]
+      [Range(0.00, 999999.99, ErrorMessage = "Purchase price Out of Range")]
+      [UIHint("number")]
+      public float? PurchasePrice { get; set; }
+
+      [MinLength(0)]
       public string LicensePlate { get; set; }
 
       public string VehicleVIN   { get; set; }

@@ -15,33 +15,37 @@
    <div class="row">
       <div class="col-4 text-center offset-4">
          <label asp-for="NickName">Nickname:</label>
-         <input class="form-control input" asp-for="NickName" placeholder="Nickname" />
+         <input class="form-control input" asp-for="NickName" placeholder="Nickname" required/>
       </div>
    </div>
 
    <div class="row">
       <div class="col-2 offset-2 text-center">
          <label asp-for="Year">Year:</label>
-         <input class="form-control input" asp-for="Year" placeholder="Year" />
+         <input class="form-control input" asp-for="Year" placeholder="Year" min="1760" max="@ViewBag.NextYear" required type="number"/>
       </div>
       <div class="col-3 text-center">
          <label asp-for="Make">Make:</label>
-         <input class="form-control input" asp-for="Make" placeholder="Make" />
+         <input class="form-control input" asp-for="Make" placeholder="Make" required/>
       </div>
       <div class="col-3 text-center">
          <label asp-for="Model">Model:</label>
-         <input class="form-control input" asp-for="Model" placeholder="Model" />
+         <input class="form-control input" asp-for="Model" placeholder="Model" required/>
       </div>
    </div>
 
    <div class="row">
-      <div class="col-3  text-center offset-3">
+      <div class="col-2  text-center offset-3">
          <label asp-for="LicensePlate">License Plate:</label>
          <input class="form-control input" asp-for="LicensePlate" placeholder="License Plate" />
       </div>
-      <div class="col-3  text-center">
+      <div class="col-2  text-center">
          <label asp-for="Mileage">Mileage:</label>
-         <input class="form-control input" asp-for="Mileage" placeholder="Mileage" />
+         <input class="form-control input" asp-for="Mileage" placeholder="Mileage" min="0" max="1500000" step="1" type="number"/>
+      </div>
+      <div class="col-2 text-center">
+         <label asp-for="PurchasePrice">Purchase Price:</label>
+         <input class="form-control input" asp-for="PurchasePrice" type="number" min="0.00" max="999999.99" step="0.01"/>
       </div>
    </div>
 
