@@ -21,6 +21,40 @@ namespace MyGarage.Controllers
       //   M e t h o d s
 
       //   C r e a t e
+      [HttpGet]
+      public IActionResult Add(int vehicleId)
+      {
+         Vehicle v = _vehicleRepository.GetVehicleById(vehicleId);
+         ViewBag.VehicleNickName = v.NickName;
+         ViewBag.VehicleId = v.Id;
+
+         DateTime date = DateTime.Today;
+         ViewBag.TodaysDate = date;
+
+         Upgrade u = new Upgrade();
+         u.Vehicle = v;
+         u.VehicleId = v.Id;
+         u.VehicleMileage = v.Mileage;
+         return View(u);
+      }//End Add() [Get]
+
+      [HttpPost]
+      public IActionResult Add(Upgrade u)
+      {
+         if (ModelState.IsValid)
+         {
+            Vehicle v = _vehicleRepository.GetVehicleById(u.VehicleId);
+
+            if (u.VehicleMileage > v.Mileage)
+            {
+               v.Mileage = u.VehicleMileage;
+            }
+
+            _repository.CreateUpgrade(u);
+            return RedirectToAction("ListUpgrades", new { vehicleId = u.VehicleId });
+         }
+         return View(u);
+      }//End Add() [Post]
 
       //   R e a d
       public IActionResult ListUpgrades(int vehicleId)
@@ -43,8 +77,61 @@ namespace MyGarage.Controllers
          return View(vehicleUpgrades);
       }//End ListUpgrades()
 
+      public IActionResult Details(int upgradeId)
+      {
+         Upgrade u = _repository.GetUpgradeById(upgradeId);
+
+         Vehicle v = _vehicleRepository.GetVehicleById(u.VehicleId);
+         ViewBag.VehicleNickName = v.NickName;
+
+         return View(u);
+      }//End Details()
+
       //   U p d a t e
+      [HttpGet]
+      public IActionResult Edit(int upgradeId)
+      {
+         Upgrade u = _repository.GetUpgradeById(upgradeId);
+         Vehicle v = _vehicleRepository.GetVehicleById(u.VehicleId);
+         ViewBag.VehicleNickName = v.NickName;
+         ViewBag.VehicleId = v.Id;
+
+         return View(u);
+      }//End Edit() [Get]
+
+      [HttpPost]
+      public IActionResult Edit(Upgrade updatedUpgrade)
+      {
+         if (ModelState.IsValid)
+         {
+            _repository.UpdateUpgrade(updatedUpgrade);
+            return RedirectToAction("Details", "Upgrade", new { upgradeId = updatedUpgrade.Id });
+         }
+         return View(updatedUpgrade);
+      }//End Edit() [Post]
 
       //   D e l e t e
+      [HttpGet]
+      public IActionResult Delete(int upgradeId)
+      {
+         Upgrade u = _repository.GetUpgradeById(upgradeId);
+
+         Vehicle v = _vehicleRepository.GetVehicleById(u.VehicleId);
+         ViewBag.VehicleNickName = v.NickName;
+         ViewBag.VehicleId = v.Id;
+
+         if (u == null)
+         {
+            return RedirectToAction("ListUpgrades", "Upgrade", new { vehicleId = u.VehicleId });
+         }
+         return View(u);
+      }//End Delete() [Get]
+
+      [HttpPost]
+      public IActionResult Delete(Upgrade u)
+      {
+         _repository.DeleteUpgrade(u.Id);
+         return RedirectToAction("ListUpgrades", "Upgrade", new { vehicleId = u.VehicleId });
+      }//End Delete() [Post]
    }
 }

@@ -33,7 +33,7 @@ namespace MyGarage.Controllers
 
          Repair r = new Repair();
          r.Vehicle = v;
-         r.VehicleId = v.Mileage;
+         r.VehicleId = v.Id;
          r.VehicleMileage = v.Mileage;
          return View(r);
       }//End Add() [Get]
@@ -105,7 +105,7 @@ namespace MyGarage.Controllers
          if(ModelState.IsValid)
          {
             _repository.UpdateRepair(updatedRepair);
-            return RedirectToAction("ListRepairs", "Repair", new { vehicleId = updatedRepair.VehicleId });
+            return RedirectToAction("Details", "Repair", new { repairId = updatedRepair.Id });
          }
          return View(updatedRepair);
       }//End Edit() [Post]

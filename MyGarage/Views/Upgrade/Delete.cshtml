@@ -1,0 +1,44 @@
+﻿@model Upgrade
+
+<div class="row">
+   <div class="col-12 text-center">
+      <h2 class="page-title">Delete @ViewBag.VehicleNickName's @Model.Type Upgrade?</h2>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-12 text-center">
+      @Model.Date.ToString("MMMM dd, yyyy")
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-12 text-center">
+      <p>Deleting will permanently delete this upgrade!</p>
+   </div>
+</div>
+
+<form method="post">
+   <input type="hidden" asp-for="Id" />
+   <input type="hidden" asp-for="Type" />
+   <input type="hidden" asp-for="Date" />
+   <input type="hidden" asp-for="Location" />
+   <input type="hidden" asp-for="Cost" />
+   <input type="hidden" asp-for="VehicleMileage" />
+   <input type="hidden" asp-for="WarrantyExpiration" />
+   <input type="hidden" asp-for="Reciept" />
+   <input type="hidden" asp-for="Photo" />
+   <input type="hidden" asp-for="VehicleId" />
+   <input type="hidden" asp-for="Vehicle" />
+
+   <div class="row">
+      <div class="col-6 text-right">
+         <a class="btn btn-cancel-2" asp-controller="Upgrade" asp-action="Details" asp-route-repairId="@Model.Id">
+            Cancel
+         </a>
+      </div>
+      <div class="col-6 text-left">
+         <input type="submit" class="btn btn-confirm" value="Delete Upgrade" />
+      </div>
+   </div>
+</form>

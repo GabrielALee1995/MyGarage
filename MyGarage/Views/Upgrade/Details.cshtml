@@ -1,0 +1,96 @@
+﻿@model Upgrade
+<div class="row">
+   <div class="col-2 text-center">
+      <a asp-controller="Upgrade" asp-action="ListUpgrades" asp-route-vehicleId="@Model.VehicleId" class="btn btn-logout">
+         Back
+      </a>
+   </div>
+   <div class="col-8  text-center">
+      <h2 class="page-title display-4">@ViewBag.VehicleNickName @Model.Type Upgrade</h2>
+   </div>
+   <div class="col-2 text-center">
+      <a class="btn btn-edit-2" asp-controller="Upgrade" asp-action="Edit" asp-route-upgradeId="@Model.Id">
+         Edit
+      </a>
+   </div>
+</div>
+<hr />
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Upgrade:
+   </div>
+   <div class="col-6 text-left">
+      @Model.Type
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Date Perfomed:
+   </div>
+   <div class="col-6 text-left">
+      @Model.Date.ToString("MMMM dd, yyyy")
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Location:
+   </div>
+   <div class="col-6 text-left">
+      @Model.Location
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Cost:
+   </div>
+   <div class="col-6 text-left">
+      @if (Model.Cost != null)
+      {
+         @Model.Cost.Value.ToString("C")
+      }
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Vehicle Mileage:
+   </div>
+   <div class="col-6 text-left">
+      @Model.VehicleMileage.ToString("N0")
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-right list-header">
+      Warranty Expiration:
+   </div>
+   <div class="col-6 text-left">
+      @if (Model.WarrantyExpiration != null)
+      {
+         @Model.WarrantyExpiration.Value.ToString("MMMM dd, yyyy")
+      }
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-6 text-center">
+      @Model.Photo
+   </div>
+   <div class="col-6 text-center">
+      @Model.Reciept
+   </div>
+</div>
+<br />
+<br />
+
+<div class="row align-bottom">
+   <div class="col-2 offset-10 text-center">
+      <a class="btn btn-delete" asp-controller="Upgrade" asp-action="Delete" asp-route-upgradeId="@Model.Id">
+         Delete
+      </a>
+   </div>
+</div>
