@@ -46,6 +46,7 @@ namespace MyGarage
          services.AddScoped<IUserRepository, EfUserRepository>();
          services.AddScoped<IVehicleRepository, EfVehicleRepository>();
          services.AddScoped<IRepairRepository, EfRepairRepository>();
+         services.AddScoped<IUpgradeRepository, EfUpgradeRepository>();
 
          services.AddControllersWithViews();
 

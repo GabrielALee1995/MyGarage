@@ -1,0 +1,74 @@
+﻿@model IQueryable<Upgrade>
+
+<div class="row">
+   <div class="col-2 text-center">
+      <a asp-controller="Vehicle" asp-action="Details" asp-route-vehicleId="@ViewBag.VehicleId" class="btn btn-logout">
+         Back
+      </a>
+   </div>
+   <div class="col-8 text-center">
+      <h2 class="page-title display-4">@ViewBag.VehicleNickName Upgrades</h2>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-4 offset-2 text-right green-text">
+      Total Cost of Upgrades:
+   </div>
+   <div class="col-4 text-left">
+      @ViewBag.TotalUpgradeCost
+   </div>
+</div>
+<hr />
+
+<div class="row">
+   <div class="col-2 offset-1 text-center list-header">
+      Upgrade
+   </div>
+   <div class="col-2 text-center list-header">
+      Date
+   </div>
+   <div class="col-2 text-center list-header">
+      Mileage
+   </div>
+   <div class="col-2 text-center list-header">
+      Cost
+   </div>
+</div>
+<br />
+
+@foreach (Upgrade u in Model.OrderByDescending(r => r.Date).ThenBy(r => r.VehicleMileage))
+{
+   <div class="row">
+      <div class="col-2 offset-1 text-center my-auto">
+         @u.Type
+      </div>
+      <div class="col-2 text-center my-auto">
+         @u.Date.ToString("MM/dd/yy")
+      </div>
+      <div class="col-2 text-center my-auto">
+         @u.VehicleMileage.ToString("N0")
+      </div>
+      <div class="col-2 text-center my-auto">
+         @u.Cost.Value.ToString("C")
+      </div>
+      <div class="col-2 text-center my-auto">
+         <a class="details" asp-controller="Upgrade" asp-action="Details" asp-route-repairId="@u.Id">Details</a>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-10 offset-1">
+         <hr />
+      </div>
+   </div>
+}
+
+<br />
+
+<div class="row">
+   <div class="col-12 text-center">
+      <a class="btn-add btn" asp-controller="Upgrade" asp-action="Add" asp-route-vehicleId="@ViewBag.VehicleId">
+         Add Upgrade
+      </a>
+   </div>
+</div>

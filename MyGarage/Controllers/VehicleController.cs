@@ -11,13 +11,15 @@ namespace MyGarage.Controllers
       private IVehicleRepository _repository;
       private IUserRepository _userRepository;
       private IRepairRepository _repairRepository;
+      private IUpgradeRepository _upgradeRepository;
 
       //   C o n s t r u c t o r s
-      public VehicleController(IVehicleRepository repository, IUserRepository userRepository, IRepairRepository repairRepository)
+      public VehicleController(IVehicleRepository repository, IUserRepository userRepository, IRepairRepository repairRepository, IUpgradeRepository upgradeRepository)
       {
          _repository = repository;
          _userRepository = userRepository;
          _repairRepository = repairRepository;
+         _upgradeRepository = upgradeRepository;
       }
 
       //   M e t h o d s
@@ -60,6 +62,7 @@ namespace MyGarage.Controllers
       public IActionResult Details(int vehicleId)
       {
          float repairsCost = 0;
+         float upgradeCost = 0;
          float vehicleCost = 0;
          float totalCost = 0;
 
@@ -70,6 +73,12 @@ namespace MyGarage.Controllers
          }
          ViewBag.RepairsCost = repairsCost.ToString("C");
 
+         IQueryable<Upgrade> upgrades = _upgradeRepository.GetVehicleUpgrades(vehicleId);
+         foreach(Upgrade u in upgrades)
+         {
+            upgradeCost += u.Cost.Value;
+         }
+         ViewBag.UpgradesCost = upgradeCost.ToString("C");
 
          Vehicle v = _repository.GetVehicleById(vehicleId);
 
@@ -77,7 +86,7 @@ namespace MyGarage.Controllers
          {
             vehicleCost = v.PurchasePrice.Value;
          }
-         totalCost = vehicleCost + repairsCost;
+         totalCost = vehicleCost + repairsCost + upgradeCost;
          ViewBag.TotalCost = totalCost.ToString("C");
 
          return View(v);

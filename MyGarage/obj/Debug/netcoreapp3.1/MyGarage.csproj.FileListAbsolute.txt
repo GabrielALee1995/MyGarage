@@ -183,3 +183,4 @@ C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\ne
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\staticwebassets\MyGarage.StaticWebAssets.xml
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.genruntimeconfig.cache
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\my-garage - Web Deploy\profile.arm.json
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\Razor\Views\Upgrade\ListUpgrades.cshtml.g.cs

@@ -92,6 +92,19 @@
    </div>
 </div>
 
+<div class="row">
+   <div class="col-6 green-text text-right my-auto">
+      Total Upgrades Cost:
+   </div>
+   <div class="col-2 my-auto text-left">
+      @ViewBag.UpgradesCost
+   </div>
+   <div class="col-sm-3 text-left my-auto">
+      <a asp-controller="Upgrade" asp-action="ListUpgrades" asp-route-vehicleId="@Model.Id" class="details">
+         View Upgrades
+      </a>
+   </div>
+</div>
 <br />
 <br />
 

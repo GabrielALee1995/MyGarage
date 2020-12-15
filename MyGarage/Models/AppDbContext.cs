@@ -9,6 +9,7 @@ namespace MyGarage.Models
       public DbSet<User>    Users    { get; set; }
       public DbSet<Vehicle> Vehicles { get; set; }
       public DbSet<Repair>  Repairs  { get; set; }
+      public DbSet<Upgrade> Upgrades { get; set; }
 
       //   C o n s t r u c t o r s
 
