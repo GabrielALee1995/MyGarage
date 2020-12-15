@@ -91,3 +91,8 @@ C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\netcoreapp3.1\MyGarage.dll
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\netcoreapp3.1\MyGarage.pdb
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\netcoreapp3.1\MyGarage.genruntimeconfig.cache
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\netcoreapp3.1\Razor\Views\Upgrade\Add.cshtml.g.cs
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\netcoreapp3.1\Razor\Views\Upgrade\Delete.cshtml.g.cs
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\netcoreapp3.1\Razor\Views\Upgrade\Details.cshtml.g.cs
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\netcoreapp3.1\Razor\Views\Upgrade\Edit.cshtml.g.cs
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Release\netcoreapp3.1\Razor\Views\Upgrade\ListUpgrades.cshtml.g.cs

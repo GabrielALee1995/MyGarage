@@ -50,7 +50,10 @@
          @u.VehicleMileage.ToString("N0")
       </div>
       <div class="col-2 text-center my-auto">
+         @if (u.Cost != null)
+         {
          @u.Cost.Value.ToString("C")
+         }
       </div>
       <div class="col-2 text-center my-auto">
          <a class="details" asp-controller="Upgrade" asp-action="Details" asp-route-upgradeId="@u.Id">Details</a>

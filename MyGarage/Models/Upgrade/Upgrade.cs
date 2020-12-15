@@ -33,7 +33,10 @@ namespace MyGarage.Models
       [DataType(DataType.Date)]
       [UIHint("date")]
       public DateTime? WarrantyExpiration { get; set; }
-      public string Reciept { get; set; }
+
+      [MaxLength(300)]
+      //public string Notes { get; set; }
+      public string Receipt { get; set; }
       public string Photo { get; set; }
 
       [ForeignKey("Vehicle")]

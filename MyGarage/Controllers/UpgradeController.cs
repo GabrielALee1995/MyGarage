@@ -65,7 +65,10 @@ namespace MyGarage.Controllers
 
          foreach (Upgrade u in vehicleUpgrades)
          {
-            total += u.Cost.Value;
+            if (u.Cost != null)
+            {
+               total += u.Cost.Value;
+            }
          }
 
          ViewBag.TotalUpgradeCost = total.ToString("C");

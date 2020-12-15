@@ -69,14 +69,21 @@ namespace MyGarage.Controllers
          IQueryable<Repair> repairs = _repairRepository.GetVehicleRepairs(vehicleId);
          foreach(Repair r in repairs)
          {
-            repairsCost += r.Cost.Value;
+            if (r.Cost != null)
+            {
+               repairsCost += r.Cost.Value;
+            }
          }
          ViewBag.RepairsCost = repairsCost.ToString("C");
 
          IQueryable<Upgrade> upgrades = _upgradeRepository.GetVehicleUpgrades(vehicleId);
+        
          foreach(Upgrade u in upgrades)
          {
-            upgradeCost += u.Cost.Value;
+            if (u.Cost != null)
+            {
+               upgradeCost += u.Cost.Value;
+            }
          }
          ViewBag.UpgradesCost = upgradeCost.ToString("C");
 

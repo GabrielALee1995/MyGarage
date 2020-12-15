@@ -14,56 +14,62 @@
    <input type="hidden" asp-for="Vehicle" />
 
    <div class="row">
-      <div class="col-6 offset-3 text-center">
+      <div class="col-6 offset-3 text-center form-group">
          <label asp-for="Type">Upgrade Type:</label>
          <input class="form-control input" asp-for="Type" placeholder="Upgrade Performed" required />
       </div>
    </div>
 
    <div class="row">
-      <div class="col-6 offset-3 text-center">
+      <div class="col-6 offset-3 text-center form-group">
          <label asp-for="Date">Date:</label>
-         <input class="form-control input" asp-for="Date" required min="1950/01/01"/>
+         <input class="form-control input" asp-for="Date" required min="1950/01/01" />
       </div>
    </div>
 
    <div class="row">
-      <div class="col-6 offset-3 text-center">
+      <div class="col-6 offset-3 text-center form-group">
          <label asp-for="Location">Location:</label>
          <input class="form-control input" asp-for="Location" placeholder="Upgrade Location" />
       </div>
    </div>
 
    <div class="row">
-      <div class="col-6 offset-3 text-center">
+      <div class="col-6 offset-3 text-center form-group">
          <label asp-for="Cost">Total Expenses:</label>
          <input class="form-control input" asp-for="Cost" min="0.00" max="999999.99" step="0.01" type="number" />
       </div>
    </div>
 
    <div class="row">
-      <div class="col-6 offset-3 text-center">
+      <div class="col-6 offset-3 text-center form-group">
          <label asp-for="VehicleMileage">Vehicle Mileage:</label>
          <input class="form-control input" asp-for="VehicleMileage" min="0" max="1500000" step="1" type="number" />
       </div>
    </div>
 
    <div class="row">
-      <div class="col-6 offset-3 text-center">
+      <div class="col-6 offset-3 text-center form-group">
          <label asp-for="WarrantyExpiration">Warranty Expiration:</label>
          <input class="form-control input" asp-for="WarrantyExpiration" min="1950/01/01" />
       </div>
    </div>
 
+
+   @*<div class="form-group col-6 offset-3">
+      <label asp-for="Notes">Notes:</label>
+      <textarea class="form-control input" rows="5" asp-for="Notes" value="Notes"></textarea>
+   </div>*@
+
    <div class="row">
-      <div class="col-6 offset-3 text-center">
-         <label asp-for="Reciept">Upload Reciept:</label>
-         <input class="form-control input" asp-for="Reciept" placeholder="Reciept" />
+      <div class="col-6 offset-3 text-center form-group">
+         <label asp-for="Receipt">Upload Receipt:</label>
+         <input class="form-control input" asp-for="Receipt" placeholder="Receipt" />
       </div>
    </div>
 
    <div class="row">
-      <div class="col-6 offset-3 text-center">
+      <div class="col-6 offset-3 text-center form-group">
          <label asp-for="Photo">Upload Photos:</label>
          <input class="form-control input" asp-for="Photo" placeholder="Photos" />
       </div>
@@ -71,12 +77,12 @@
    <br />
 
    <div class="row">
-      <div class="col-6 text-right">
+      <div class="col-6 text-right form-group">
          <a class="btn btn-cancel-2" asp-controller="Upgrade" asp-action="ListUpgrades" asp-route-vehicleId="@ViewBag.VehicleId">
             Cancel
          </a>
       </div>
-      <div class="col-6 text-left">
+      <div class="col-6 text-left form-group">
          <input class="btn btn-confirm" type="submit" value="Update Upgrade" />
       </div>
    </div>

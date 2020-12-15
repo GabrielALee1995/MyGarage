@@ -55,7 +55,8 @@ namespace MyGarage.Models
             repairToUpdate.Cost = repair.Cost;
             repairToUpdate.VehicleMileage = repair.VehicleMileage;
             repairToUpdate.WarrantyExpiration = repair.WarrantyExpiration;
-            repairToUpdate.Reciept = repair.Reciept;
+            //repairToUpdate.Notes = repair.Notes;
+            repairToUpdate.Receipt = repair.Receipt;
             repairToUpdate.Photo = repair.Photo;
             _context.SaveChanges();
          }
