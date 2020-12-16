@@ -93,8 +93,6 @@ C:\Users\gabri\OneDrive\Desktop\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.csprojAssemblyReference.cache
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.AssemblyInfoInputs.cache
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.AssemblyInfo.cs
-C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.csproj.CoreCompileInputs.cache
-C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.RazorAssemblyInfo.cache
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.RazorAssemblyInfo.cs
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.dll
@@ -188,3 +186,9 @@ C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\ne
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\Razor\Views\Upgrade\Details.cshtml.g.cs
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\Razor\Views\Upgrade\Edit.cshtml.g.cs
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\Razor\Views\Upgrade\Delete.cshtml.g.cs
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.MvcApplicationPartsAssemblyInfo.cache

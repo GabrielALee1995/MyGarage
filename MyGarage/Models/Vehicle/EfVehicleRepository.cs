@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.IO;
 using System.Linq;
 
 namespace MyGarage.Models
@@ -8,11 +12,13 @@ namespace MyGarage.Models
       //   F i e l d s   &   P r o p e r t i e s
 
       private AppDbContext _context;
+      private readonly IWebHostEnvironment environment;
 
       //   C o n s t r u c t o r s
-      public EfVehicleRepository(AppDbContext context)
+      public EfVehicleRepository(AppDbContext context, IWebHostEnvironment env)
       {
          _context = context;
+         environment = env;
       }
 
       //   M e t h o d s
@@ -24,7 +30,6 @@ namespace MyGarage.Models
          {
             return null;
          }
-
          _context.Vehicles.Add(vehicle);
          _context.SaveChanges();
          return vehicle;

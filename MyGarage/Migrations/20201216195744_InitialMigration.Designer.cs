@@ -10,8 +10,8 @@ using MyGarage.Models;
 namespace MyGarage.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201215211259_Alignment")]
-    partial class Alignment
+    [Migration("20201216195744_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +19,7 @@ namespace MyGarage.Migrations
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("ProductVersion", "5.0.1");
 
             modelBuilder.Entity("MyGarage.Models.Repair", b =>
                 {

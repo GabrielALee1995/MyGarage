@@ -32,6 +32,7 @@ namespace MyGarage.Controllers
          Vehicle v = new Vehicle();
          v.User = u;
          v.UserId = userId;
+
          return View(v);
       } //End Add( ) [Get]
 

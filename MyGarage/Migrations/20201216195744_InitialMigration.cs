@@ -31,8 +31,9 @@ namespace MyGarage.Migrations
                     Year = table.Column<int>(type: "int", nullable: false),
                     Make = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NickName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NickName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Mileage = table.Column<int>(type: "int", nullable: false),
+                    PurchasePrice = table.Column<decimal>(type: "decimal(8,2)", nullable: true),
                     LicensePlate = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     VehicleVIN = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -61,7 +62,7 @@ namespace MyGarage.Migrations
                     Cost = table.Column<decimal>(type: "decimal(8,2)", nullable: true),
                     VehicleMileage = table.Column<int>(type: "int", nullable: false),
                     WarrantyExpiration = table.Column<DateTime>(type: "date", nullable: true),
-                    Reciept = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Receipt = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: true),
                     Photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     VehicleId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -76,9 +77,41 @@ namespace MyGarage.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Upgrades",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Type = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Date = table.Column<DateTime>(type: "date", nullable: false),
+                    Location = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Cost = table.Column<decimal>(type: "decimal(8,2)", nullable: true),
+                    VehicleMileage = table.Column<int>(type: "int", nullable: false),
+                    WarrantyExpiration = table.Column<DateTime>(type: "date", nullable: true),
+                    Receipt = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: true),
+                    Photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    VehicleId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Upgrades", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Upgrades_Vehicle_VehicleId",
+                        column: x => x.VehicleId,
+                        principalTable: "Vehicle",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Repairs_VehicleId",
                 table: "Repairs",
+                column: "VehicleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Upgrades_VehicleId",
+                table: "Upgrades",
                 column: "VehicleId");
 
             migrationBuilder.CreateIndex(
@@ -97,6 +130,9 @@ namespace MyGarage.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Repairs");
+
+            migrationBuilder.DropTable(
+                name: "Upgrades");
 
             migrationBuilder.DropTable(
                 name: "Vehicle");
