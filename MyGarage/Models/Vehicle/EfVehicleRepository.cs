@@ -83,6 +83,7 @@ namespace MyGarage.Models
             vehicleToUpdate.VehicleVIN = vehicle.VehicleVIN;
             vehicleToUpdate.Photo = vehicle.Photo;
             vehicleToUpdate.PurchasePrice = vehicle.PurchasePrice;
+            vehicleToUpdate.PurchaseDate = vehicle.PurchaseDate;
             vehicleToUpdate.Repairs = vehicle.Repairs;
             vehicleToUpdate.Upgrades = vehicle.Upgrades;
             _context.SaveChanges();

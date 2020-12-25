@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ubl3lQjlGQkWbc/gBQpUiksCVviuhaKG3PyEEznQceVmGEa5vhGgBAEZgausUA8v6O6Y+WjoMlQUTfZtaZMJgg==",
+  "dgSpecHash": "wj/Y3ipfapzbMHC0UyZIudxdTeTdCrIyJZiJmPnW9mKCIMrNkpCLQCOwq/R5V/RAIbdW8PJGZlYAYuQa3WvZmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Projects\\MyGarage\\MyGarage\\MyGarage\\MyGarage.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Coding\\Projects\\MyGarage\\MyGarage\\MyGarage\\MyGarage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\azure.storage.blobs\\12.7.0\\azure.storage.blobs.12.7.0.nupkg.sha512",

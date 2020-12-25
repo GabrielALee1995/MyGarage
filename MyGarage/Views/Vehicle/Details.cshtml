@@ -61,6 +61,18 @@
       }
    </div>
 </div>
+
+<div class="row">
+   <div class="col-6 text-right green-text">
+      <h4>Price Date:</h4>
+   </div>
+   <div class="col-6 text-left">
+      @if (Model.PurchaseDate != null)
+      {
+         <h4>@Model.PurchaseDate.Value.ToString("MMMM dd, yyyy")</h4>
+      }
+   </div>
+</div>
 <br />
 
 <div class="row">

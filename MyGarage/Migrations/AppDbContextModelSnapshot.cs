@@ -164,6 +164,9 @@ namespace MyGarage.Migrations
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("PurchaseDate")
+                        .HasColumnType("date");
+
                     b.Property<decimal?>("PurchasePrice")
                         .HasColumnType("decimal(8,2)");
 

@@ -37,17 +37,21 @@
    </div>
 
    <div class="row">
-      <div class="col-2  text-center offset-3">
+      <div class="col-2  text-center offset-2">
          <label asp-for="LicensePlate">License Plate:</label>
          <input class="form-control input" asp-for="LicensePlate" placeholder="License Plate" />
       </div>
       <div class="col-2  text-center">
          <label asp-for="Mileage">Mileage:</label>
-         <input class="form-control input" asp-for="Mileage" placeholder="Mileage" min="0" max="1500000" step="1" type="number"/>
+         <input class="form-control input" asp-for="Mileage" placeholder="Mileage" min="0" max="1500000" step="1" type="number" />
       </div>
       <div class="col-2 text-center">
          <label asp-for="PurchasePrice">Purchase Price:</label>
          <input class="form-control input" asp-for="PurchasePrice" type="number" min="0.00" max="999999.99" step="0.01" />
+      </div>
+      <div class="col-2 text-center">
+         <label asp-for="PurchaseDate">Purchase Date:</label>
+         <input class="form-control input" asp-for="PurchaseDate" min="1950/01/01" />
       </div>
    </div>
 

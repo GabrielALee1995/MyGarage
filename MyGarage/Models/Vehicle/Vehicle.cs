@@ -36,6 +36,12 @@ namespace MyGarage.Models
       [UIHint("number")]
       public float?        PurchasePrice  { get; set; }
 
+      [Column(TypeName = "date")]
+      [DataType(DataType.Date)]
+      [UIHint("date")]
+      public DateTime? PurchaseDate { get; set; }
+
+
       [MinLength(0)]
       public string        LicensePlate   { get; set; }
 

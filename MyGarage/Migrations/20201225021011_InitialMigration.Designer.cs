@@ -10,7 +10,7 @@ using MyGarage.Models;
 namespace MyGarage.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201216195744_InitialMigration")]
+    [Migration("20201225021011_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -165,6 +165,9 @@ namespace MyGarage.Migrations
 
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("PurchaseDate")
+                        .HasColumnType("date");
 
                     b.Property<decimal?>("PurchasePrice")
                         .HasColumnType("decimal(8,2)");

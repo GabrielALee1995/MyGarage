@@ -34,6 +34,7 @@ namespace MyGarage.Migrations
                     NickName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Mileage = table.Column<int>(type: "int", nullable: false),
                     PurchasePrice = table.Column<decimal>(type: "decimal(8,2)", nullable: true),
+                    PurchaseDate = table.Column<DateTime>(type: "date", nullable: true),
                     LicensePlate = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     VehicleVIN = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
