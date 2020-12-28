@@ -16,14 +16,14 @@
    <div class="row">
       <div class="col-6 offset-3 text-center">
          <label asp-for="Type">Repair Type:</label>
-         <input class="form-control input" asp-for="Type" placeholder="Repair Performed" required/>
+         <input class="form-control input" asp-for="Type" placeholder="Repair Performed" required />
       </div>
    </div>
 
    <div class="row">
       <div class="col-6 offset-3 text-center">
          <label asp-for="Date">Date:</label>
-         <input class="form-control input" asp-for="Date" required min="1950/01/01" value="@ViewBag.TodaysDate"/>
+         <input class="form-control input" asp-for="Date" required min="1950/01/01" value="@ViewBag.TodaysDate" />
       </div>
    </div>
 
@@ -36,22 +36,29 @@
 
    <div class="row">
       <div class="col-6 offset-3 text-center">
-         <label asp-for="Cost">Total Expenses:</label>
-         <input class="form-control input" asp-for="Cost" min="0.00" max="999999.99" step="0.01" type="number"/>
+         <label asp-for="PartsCost">Parts Cost:</label>
+         <input class="form-control input" asp-for="PartsCost" min="0.00" max="999999.99" step="0.01" type="number" />
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-6 offset-3 text-center">
+         <label asp-for="LaborCost">Labor Cost:</label>
+         <input class="form-control input" asp-for="LaborCost" min="0.00" max="999999.99" step="0.01" type="number" />
       </div>
    </div>
 
    <div class="row">
       <div class="col-6 offset-3 text-center">
          <label asp-for="VehicleMileage">Vehicle Mileage:</label>
-         <input class="form-control input" asp-for="VehicleMileage" min="0" max="1500000" step="1" type="number"/>
+         <input class="form-control input" asp-for="VehicleMileage" min="0" max="1500000" step="1" type="number" />
       </div>
    </div>
 
    <div class="row">
       <div class="col-6 offset-3 text-center">
          <label asp-for="WarrantyExpiration">Warranty Expiration:</label>
-         <input class="form-control input" asp-for="WarrantyExpiration" min="1950/01/01" value="@ViewBag.TodaysDate"/>
+         <input class="form-control input" asp-for="WarrantyExpiration" min="1950/01/01" value="@ViewBag.TodaysDate" />
       </div>
    </div>
 
@@ -77,7 +84,7 @@
          </a>
       </div>
       <div class="col-6 text-left">
-         <input class="btn btn-confirm" type="submit" value="Add Repair"/>
+         <input class="btn btn-confirm" type="submit" value="Add Repair" />
       </div>
    </div>
 </form>

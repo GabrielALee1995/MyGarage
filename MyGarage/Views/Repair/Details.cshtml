@@ -47,19 +47,34 @@
    </div>
 }
 
-@if (Model.Cost != null)
+@if (Model.PartsCost != null)
 {
    <div class="row">
       <div class="col-6 text-right list-header">
-         Cost:
+         Parts Cost:
       </div>
       <div class="col-6 text-left">
 
-         @Model.Cost.Value.ToString("C")
+         @Model.PartsCost.Value.ToString("C")
 
       </div>
    </div>
 }
+
+@if (Model.LaborCost != null)
+{
+   <div class="row">
+      <div class="col-6 text-right list-header">
+         Labor Cost:
+      </div>
+      <div class="col-6 text-left">
+
+         @Model.LaborCost.Value.ToString("C")
+
+      </div>
+   </div>
+}
+
 <div class="row">
    <div class="col-6 text-right list-header">
       Vehicle Mileage:

@@ -38,10 +38,15 @@
 </div>
 <br />
 
+
 @foreach (Repair r in Model.OrderByDescending(r => r.Date).ThenBy(r => r.VehicleMileage))
 {
+      float total = 0;
+      total += r.LaborCost.Value;
+      total += r.PartsCost.Value;
+
    <div class="row">
-      <div class="col-2 offset-1 text-center my-auto">
+      <div class="col-2 offset-1 my-auto">
          @r.Type
       </div>
       <div class="col-2 text-center my-auto">
@@ -51,17 +56,14 @@
          @r.VehicleMileage.ToString("N0")
       </div>
       <div class="col-2 text-center my-auto">
-         @if (r.Cost != null)
-         {
-            @r.Cost.Value.ToString("C")
-         }
+            @total.ToString("C")
       </div>
       <div class="col-2 text-center my-auto">
          <a class="details" asp-controller="Repair" asp-action="Details" asp-route-repairId="@r.Id">Details</a>
       </div>
    </div>
    <div class="row">
-      <div class="col-10 offset-1">
+      <div class="col">
          <hr />
       </div>
    </div>

@@ -194,8 +194,6 @@ C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\ne
 C:\Users\gabri\OneDrive\Desktop\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\my-garage - Web Deploy\profile.arm.json
 C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\MyGarage.exe
 C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\MyGarage.deps.json
 C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\bin\Debug\netcoreapp3.1\MyGarage.runtimeconfig.json
@@ -294,3 +292,4 @@ C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\obj\D
 C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.dll
 C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.pdb
 C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\MyGarage.genruntimeconfig.cache
+C:\Users\gabri\OneDrive\Desktop\Coding\Projects\MyGarage\MyGarage\MyGarage\obj\Debug\netcoreapp3.1\scopedcss\bundle\MyGarage.styles.css

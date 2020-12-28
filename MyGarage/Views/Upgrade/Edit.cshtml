@@ -36,8 +36,15 @@
 
    <div class="row">
       <div class="col-6 offset-3 text-center form-group">
-         <label asp-for="Cost">Total Expenses:</label>
-         <input class="form-control input" asp-for="Cost" min="0.00" max="999999.99" step="0.01" type="number" />
+         <label asp-for="PartsCost">Parts Cost:</label>
+         <input class="form-control input" asp-for="PartsCost" min="0.00" max="999999.99" step="0.01" type="number" />
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-6 offset-3 text-center form-group">
+         <label asp-for="LaborCost">Labor Cost:</label>
+         <input class="form-control input" asp-for="LaborCost" min="0.00" max="999999.99" step="0.01" type="number" />
       </div>
    </div>
 
@@ -57,9 +64,9 @@
 
 
    @*<div class="form-group col-6 offset-3">
-      <label asp-for="Notes">Notes:</label>
-      <textarea class="form-control input" rows="5" asp-for="Notes" value="Notes"></textarea>
-   </div>*@
+         <label asp-for="Notes">Notes:</label>
+         <textarea class="form-control input" rows="5" asp-for="Notes" value="Notes"></textarea>
+      </div>*@
 
    <div class="row">
       <div class="col-6 offset-3 text-center form-group">

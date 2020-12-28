@@ -55,7 +55,8 @@ namespace MyGarage.Models
             upgradeToUpdate.Type = upgrade.Type;
             upgradeToUpdate.Date = upgrade.Date;
             upgradeToUpdate.Location = upgrade.Location;
-            upgradeToUpdate.Cost = upgrade.Cost;
+            upgradeToUpdate.PartsCost = upgrade.PartsCost;
+            upgradeToUpdate.LaborCost = upgradeToUpdate.LaborCost;
             upgradeToUpdate.VehicleMileage = upgrade.VehicleMileage;
             upgradeToUpdate.WarrantyExpiration = upgrade.WarrantyExpiration;
             //upgradeToUpdate.Notes = upgrade.Notes;

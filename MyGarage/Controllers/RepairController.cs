@@ -65,9 +65,14 @@ namespace MyGarage.Controllers
 
          foreach (Repair r in vehicleRepairs)
          {
-            if (r.Cost != null)
+            if (r.LaborCost != null)
             {
-               total += r.Cost.Value;
+               total += r.LaborCost.Value;
+            }
+
+            if (r.PartsCost != null)
+            {
+               total += r.PartsCost.Value;
             }
          }
 

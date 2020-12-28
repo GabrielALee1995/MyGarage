@@ -39,6 +39,10 @@
 
 @foreach (Upgrade u in Model.OrderByDescending(u => u.Date).ThenBy(u => u.VehicleMileage))
 {
+   float total = 0;
+   total += u.LaborCost.Value;
+   total += u.PartsCost.Value;
+
    <div class="row">
       <div class="col-2 offset-1 text-center my-auto">
          @u.Type
@@ -50,10 +54,7 @@
          @u.VehicleMileage.ToString("N0")
       </div>
       <div class="col-2 text-center my-auto">
-         @if (u.Cost != null)
-         {
-         @u.Cost.Value.ToString("C")
-         }
+         @total.ToString("C")
       </div>
       <div class="col-2 text-center my-auto">
          <a class="details" asp-controller="Upgrade" asp-action="Details" asp-route-upgradeId="@u.Id">Details</a>

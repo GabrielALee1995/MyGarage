@@ -52,7 +52,8 @@ namespace MyGarage.Models
             repairToUpdate.Type = repair.Type;
             repairToUpdate.Date = repair.Date;
             repairToUpdate.Location = repair.Location;
-            repairToUpdate.Cost = repair.Cost;
+            repairToUpdate.PartsCost = repair.PartsCost;
+            repairToUpdate.LaborCost = repair.LaborCost;
             repairToUpdate.VehicleMileage = repair.VehicleMileage;
             repairToUpdate.WarrantyExpiration = repair.WarrantyExpiration;
             //repairToUpdate.Notes = repair.Notes;

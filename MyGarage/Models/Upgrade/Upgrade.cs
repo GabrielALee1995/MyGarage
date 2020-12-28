@@ -21,9 +21,14 @@ namespace MyGarage.Models
       public string Location { get; set; }
 
       [Column(TypeName = "decimal(8,2)")]
-      [Range(0.00, 999999.99, ErrorMessage = "Upgrade Cost Out of Range")]
+      [Range(0.00, 999999.99, ErrorMessage = "Upgrade Parts Cost Out of Range")]
       [UIHint("number")]
-      public float? Cost { get; set; }
+      public float? PartsCost { get; set; }
+
+      [Column(TypeName = "decimal(8,2)")]
+      [Range(0.00, 999999.99, ErrorMessage = "Upgrade Labor Cost Out of Range")]
+      [UIHint("number")]
+      public float? LaborCost { get; set; }
 
       [Range(0, 1500000, ErrorMessage = "Mileage Out of Range")]
       [UIHint("number")]
