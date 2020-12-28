@@ -107,6 +107,11 @@ namespace MyGarage.Controllers
       {
          if (ModelState.IsValid)
          {
+            Vehicle v = _vehicleRepository.GetVehicleById(updatedUpgrade.VehicleId);
+            if (updatedUpgrade.VehicleMileage > v.Mileage)
+            {
+               v.Mileage = updatedUpgrade.VehicleMileage;
+            }
             _repository.UpdateUpgrade(updatedUpgrade);
             return RedirectToAction("Details", "Upgrade", new { upgradeId = updatedUpgrade.Id });
          }

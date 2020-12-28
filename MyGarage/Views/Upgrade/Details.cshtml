@@ -34,26 +34,29 @@
    </div>
 </div>
 
-<div class="row">
-   <div class="col-6 text-right list-header">
-      Location:
+@if (Model.Location != null)
+{
+   <div class="row">
+      <div class="col-6 text-right list-header">
+         Location:
+      </div>
+      <div class="col-6 text-left">
+         @Model.Location
+      </div>
    </div>
-   <div class="col-6 text-left">
-      @Model.Location
-   </div>
-</div>
+}
 
-<div class="row">
-   <div class="col-6 text-right list-header">
-      Cost:
-   </div>
-   <div class="col-6 text-left">
-      @if (Model.Cost != null)
-      {
+@if (Model.Cost != null)
+{
+   <div class="row">
+      <div class="col-6 text-right list-header">
+         Cost:
+      </div>
+      <div class="col-6 text-left">
          @Model.Cost.Value.ToString("C")
-      }
+      </div>
    </div>
-</div>
+}
 
 <div class="row">
    <div class="col-6 text-right list-header">
@@ -64,17 +67,17 @@
    </div>
 </div>
 
-<div class="row">
-   <div class="col-6 text-right list-header">
-      Warranty Expiration:
-   </div>
-   <div class="col-6 text-left">
-      @if (Model.WarrantyExpiration != null)
-      {
+@if (Model.WarrantyExpiration != null)
+{
+   <div class="row">
+      <div class="col-6 text-right list-header">
+         Warranty Expiration:
+      </div>
+      <div class="col-6 text-left">
          @Model.WarrantyExpiration.Value.ToString("MMMM dd, yyyy")
-      }
+      </div>
    </div>
-</div>
+}
 
 <div class="row">
    <div class="col-6 text-center">

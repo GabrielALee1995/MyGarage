@@ -105,8 +105,13 @@ namespace MyGarage.Controllers
       [HttpPost]
       public IActionResult Edit(Repair updatedRepair)
       {
-         if(ModelState.IsValid)
+         if (ModelState.IsValid)
          {
+            Vehicle v = _vehicleRepository.GetVehicleById(updatedRepair.VehicleId);
+            if (updatedRepair.VehicleMileage > v.Mileage)
+            {
+               v.Mileage = updatedRepair.VehicleMileage;
+            }
             _repository.UpdateRepair(updatedRepair);
             return RedirectToAction("Details", "Repair", new { repairId = updatedRepair.Id });
          }

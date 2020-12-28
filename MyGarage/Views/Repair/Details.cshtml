@@ -10,7 +10,7 @@
       <h2 class="page-title display-4">@ViewBag.VehicleNickName @Model.Type Repair</h2>
    </div>
    <div class="col-2 text-center">
-      <a  class="btn btn-edit-2" asp-controller="Repair" asp-action="Edit" asp-route-repairId="@Model.Id">
+      <a class="btn btn-edit-2" asp-controller="Repair" asp-action="Edit" asp-route-repairId="@Model.Id">
          Edit
       </a>
    </div>
@@ -35,27 +35,31 @@
    </div>
 </div>
 
-<div class="row">
-   <div class="col-6 text-right list-header">
-      Location:
+@if (@Model.Location != null)
+{
+   <div class="row">
+      <div class="col-6 text-right list-header">
+         Location:
+      </div>
+      <div class="col-6 text-left">
+         @Model.Location
+      </div>
    </div>
-   <div class="col-6 text-left">
-      @Model.Location
-   </div>
-</div>
+}
 
-<div class="row">
-   <div class="col-6 text-right list-header">
-      Cost:
-   </div>
-   <div class="col-6 text-left">
-      @if (Model.Cost != null)
-      {
-      @Model.Cost.Value.ToString("C")
-      }
-   </div>
-</div>
+@if (Model.Cost != null)
+{
+   <div class="row">
+      <div class="col-6 text-right list-header">
+         Cost:
+      </div>
+      <div class="col-6 text-left">
 
+         @Model.Cost.Value.ToString("C")
+
+      </div>
+   </div>
+}
 <div class="row">
    <div class="col-6 text-right list-header">
       Vehicle Mileage:
@@ -65,17 +69,18 @@
    </div>
 </div>
 
-<div class="row">
-   <div class="col-6 text-right list-header">
-      Warranty Expiration:
-   </div>
-   <div class="col-6 text-left">
-      @if (Model.WarrantyExpiration != null)
-      {
+@if (Model.WarrantyExpiration != null)
+{
+   <div class="row">
+      <div class="col-6 text-right list-header">
+         Warranty Expiration:
+      </div>
+      <div class="col-6 text-left">
+
          @Model.WarrantyExpiration.Value.ToString("MMMM dd, yyyy")
-      }
+      </div>
    </div>
-</div>
+}
 
 <div class="row">
    <div class="col-6 text-center">

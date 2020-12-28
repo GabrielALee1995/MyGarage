@@ -41,99 +41,102 @@
    </div>
 </div>
 
-<div class="row">
-   <div class="col-6 text-right">
-      <h4 class="green-text"> License Plate:</h4>
+@if (Model.LicensePlate != null)
+{
+   <div class="row">
+      <div class="col-6 text-right">
+         <h4 class="green-text"> License Plate:</h4>
+      </div>
+      <div class="col-6 text-left">
+         <h4>@Model.LicensePlate</h4>
+      </div>
    </div>
-   <div class="col-6 text-left">
-      <h4>@Model.LicensePlate</h4>
-   </div>
-</div>
+}
 
-<div class="row">
-   <div class="col-6 text-right green-text">
-      <h4>Price Purchased:</h4>
-   </div>
-   <div class="col-6 text-left">
-      @if (Model.PurchasePrice != null)
-      {
+@if (Model.PurchasePrice != null)
+{
+   <div class="row">
+      <div class="col-6 text-right green-text">
+         <h4>Price Purchased:</h4>
+      </div>
+      <div class="col-6 text-left">
          <h4>@Model.PurchasePrice.Value.ToString("C")</h4>
-      }
+      </div>
    </div>
-</div>
+}
 
-<div class="row">
-   <div class="col-6 text-right green-text">
-      <h4>Price Date:</h4>
+@if (Model.PurchaseDate != null)
+{
+   <div class="row">
+      <div class="col-6 text-right green-text">
+         <h4>Purchase Date:</h4>
+      </div>
+      <div class="col-6 text-left">
+         <h4>@Model.PurchaseDate.Value.ToString("MMMM dd, yyyy")</h4>        
+      </div>
    </div>
-   <div class="col-6 text-left">
-      @if (Model.PurchaseDate != null)
-      {
-         <h4>@Model.PurchaseDate.Value.ToString("MMMM dd, yyyy")</h4>
-      }
-   </div>
-</div>
-<br />
+}
+   <br />
 
-<div class="row">
-   <div class="col-6 text-right green-text">
-      <h4>Total Spent on @Model.NickName:</h4>
+   <div class="row">
+      <div class="col-6 text-right green-text">
+         <h4>Total Spent on @Model.NickName:</h4>
+      </div>
+      <div class="col-6 text-left">
+         <h4>@ViewBag.TotalCost</h4>
+      </div>
    </div>
-   <div class="col-6 text-left">
-      <h4>@ViewBag.TotalCost</h4>
-   </div>
-</div>
 
-<div class="row">
-   <div class="col-8 offset-2 text-center">
-      <hr />
+   <div class="row">
+      <div class="col-8 offset-2 text-center">
+         <hr />
+      </div>
    </div>
-</div>
 
-<div class="row">
-   <div class="col-6 green-text text-right my-auto">
-      Total Repairs Cost:
+   <div class="row">
+      <div class="col-6 green-text text-right my-auto">
+         Total Repairs Cost:
+      </div>
+      <div class="col-2 my-auto text-left">
+         @ViewBag.RepairsCost
+      </div>
+      <div class="col-sm-3 text-left my-auto">
+         <a asp-controller="Repair" asp-action="ListRepairs" asp-route-vehicleId="@Model.Id" class="details">
+            View Repairs
+         </a>
+      </div>
    </div>
-   <div class="col-2 my-auto text-left">
-      @ViewBag.RepairsCost
-   </div>
-   <div class="col-sm-3 text-left my-auto">
-      <a asp-controller="Repair" asp-action="ListRepairs" asp-route-vehicleId="@Model.Id" class="details">
-         View Repairs
-      </a>
-   </div>
-</div>
 
-<div class="row">
-   <div class="col-6 green-text text-right my-auto">
-      Total Upgrades Cost:
+   <div class="row">
+      <div class="col-6 green-text text-right my-auto">
+         Total Upgrades Cost:
+      </div>
+      <div class="col-2 my-auto text-left">
+         @ViewBag.UpgradesCost
+      </div>
+      <div class="col-sm-3 text-left my-auto">
+         <a asp-controller="Upgrade" asp-action="ListUpgrades" asp-route-vehicleId="@Model.Id" class="details">
+            View Upgrades
+         </a>
+      </div>
    </div>
-   <div class="col-2 my-auto text-left">
-      @ViewBag.UpgradesCost
-   </div>
-   <div class="col-sm-3 text-left my-auto">
-      <a asp-controller="Upgrade" asp-action="ListUpgrades" asp-route-vehicleId="@Model.Id" class="details">
-         View Upgrades
-      </a>
-   </div>
-</div>
-<br />
-<br />
+   <br />
+   <br />
 
-<div class="row">
-   <div class="col-6 text-right green-text">
-      <p>Vehicle Identification Number:</p>
+   <div class="row">
+      <div class="col-6 text-right green-text">
+         <p>Vehicle Identification Number:</p>
+      </div>
+      <div class="col-6 text-left">
+         <p>@Model.VehicleVIN</p>
+      </div>
    </div>
-   <div class="col-6 text-left">
-      <p>@Model.VehicleVIN</p>
-   </div>
-</div>
-<br />
+   <br />
 
-<div class="row align-bottom">
-   <div class="col-2 offset-10 text-center">
-      <a asp-controller="Vehicle" asp-action="Delete" asp-route-vehicleId="@Model.Id" class="btn btn-delete">
-         Delete
-      </a>
+   <div class="row align-bottom">
+      <div class="col-2 offset-10 text-center">
+         <a asp-controller="Vehicle" asp-action="Delete" asp-route-vehicleId="@Model.Id" class="btn btn-delete">
+            Delete
+         </a>
+      </div>
    </div>
-</div>
